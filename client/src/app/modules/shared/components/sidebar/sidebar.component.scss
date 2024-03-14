@@ -1,0 +1,22 @@
+/* Add styles for the hide button */
+.hide-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Show the hide button when the sidebar is hovered */
+.show-button .hide-button {
+  display: block;
+}
+
+/* Hide the hide button by default */
+.hide-button {
+  display: none;
+}

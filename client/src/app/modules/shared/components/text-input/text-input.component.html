@@ -1,0 +1,10 @@
+<div class="m-2 rounded-md border-black border-2 flex">
+  <div class="w-11/12 ">
+    <input type="text" name="text input" id="input" placeholder="Enter your prompt here" class="w-full m-0 p-3" [(ngModel)]="promptText">
+  </div>
+  <div class="flex justify-end w-1/12 ">
+    <button class="w-full m-0 text-3xl hover:bg-gray-300" (click)="onSendButton()">
+      <fa-icon [icon]="faCircleUp"></fa-icon>
+    </button>
+  </div>
+  </div>
