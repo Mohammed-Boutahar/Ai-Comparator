@@ -17,7 +17,7 @@ export class TextInputComponent {
     new EventEmitter<string>();
   @Output() onChatGPTRespond: EventEmitter<string> =
     new EventEmitter<string>();
-  textInput: string = '';
+
   promptText: string = '';
   onSendButton() {
     this.onSendButtonClicked.emit(this.promptText);
@@ -32,7 +32,7 @@ export class TextInputComponent {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.response);
+        console.log(data.usage);
         this.onChatGPTRespond.emit(data.response);
       })
       .catch((error) => {

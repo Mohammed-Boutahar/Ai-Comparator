@@ -17,14 +17,14 @@ export class MainPageComponent {
   addToUserConversation(text:string){
     if(text !== ''){
       this.conversationList.push(`User : ${text}`);
-      console.log(this.conversationList)
+      // console.log(this.conversationList)
     }
   }
 
   addToSystemConversation(text:string){
     if(text !== ''){
       this.conversationList.push(`ChatGPT : ${text}`);
-      console.log(this.conversationList)
+      // console.log(this.conversationList)
     }
   }
 

@@ -1,19 +1,25 @@
+<div class="bg-gray-300">
+
 <app-header></app-header>
-<div class="flex w-full h-full">
-  <div class="w-1/6 ">
+<div class="flex ">
+  <div id="sidebar" class="flex-col h-full my-0 w-1/6 bg-gray-800 ">
     <app-sidebar></app-sidebar>
-    <div>Down</div>
   </div>
 
 
   <div class="w-5/6 flex-col">
-    <div class="h-5/6">
+    <div class=" flex-row overflow-auto h-5/6 border-2 border-black rounded-sm m-2 p-2">
       <!-- from child to mother compo using @Input decoratror -->
-      <app-text-conversation [conversation]="conversationList"></app-text-conversation>
+      <app-text-conversation [conversation]="conversationList" class="overflow-hidden"></app-text-conversation>
     </div>
 
-    <div class="h-1/6 mb-1">
+    <div class="flex-row mt-4 pt-2">
       <app-text-input (onSendButtonClicked)="addToUserConversation($event)" (onChatGPTRespond)="addToSystemConversation($event)"></app-text-input>
     </div>
+    <footer class="flex justify-end">
+      <span class="text-sm"> Version: 0.0</span>
+    </footer>
   </div>
 </div>
+</div>
+
