@@ -32,7 +32,7 @@ export class TextInputComponent {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.usage);
+        console.log(data);
         this.onChatGPTRespond.emit(data.response);
       })
       .catch((error) => {
